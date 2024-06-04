@@ -81,17 +81,13 @@ p, a {
 }
 
 #mainbutton p {
-    font-size: 5vw;
+    font-size: 5vmax;
     background-color: rgb(110, 44, 17);
     text-align: center;
     height: 150px;
     display: grid;
     align-items: center;
     border-radius: 40px;
-}
-
-.btn {
-    background-color: rgb(153, 67, 34);
 }
 
 #helpbox {
@@ -104,8 +100,8 @@ p, a {
     background-color: rgba(110, 43, 17, 0.75);
     overflow-y: scroll;
     height: 100%;
-    padding: 20px;
-    font-size: 5vw;
+    padding: 30px;
+    font-size: 7vw;
 }
 
 #helpbutton {
@@ -136,7 +132,7 @@ p, a {
     display: grid;
     align-items: center;
     height: 100%;
-    font-size: 10vw;
+    font-size: 5vmax;
 }
 
 #questionbox {
@@ -257,4 +253,58 @@ p, a {
     display: grid;
     align-items: center;
     font-size: 5vw;
+}
+
+#profilecontainer {
+    width: 100%;
+    height: 75%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+#playername p {
+    font-size: 5vw;
+    text-align: center;
+    padding: 25px;
+    background-color: rgba(110, 43, 17);
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+#profilecontainer input {
+    height: 100px;
+    text-align: center;
+    border: none;
+    background-color: rgba(110, 43, 17, 0.75);
+    font-size:5vw;
+    color: white;
+}
+
+#profilepicture {
+    width: 100%;
+    height: 50%;
+}
+
+#rank p {
+    font-size: 5vw;
+    text-align: center;
+    padding: 25px;
+    background-color: rgba(110, 43, 17);
+    margin-bottom: 5px;
+}
+
+#resumebutton2 {
+    background-color: rgba(110, 43, 17);
+    text-align: center;
+    font-size: 5vw;
+    height: 10%;
+    display: grid;
+    align-items: center;
+    border-radius: 25px;
 }

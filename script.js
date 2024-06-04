@@ -180,7 +180,7 @@ const listpertanyaan = [
         sumber:"https://travelingyuk.com/fakta-unik-suku-baduy/276470/"
     },
     {
-        pertanyaan:"Kuburan suku Baduy tiak bertanda",
+        pertanyaan:"Kuburan suku Baduy tidak bertanda",
         penjelasan:"Tidak seperti kuburan biasanya yang ditandai dengan batu nisan, suku Baduy justru tidak memberikan tanda pada kuburan melainkan meratakannya kembali seperti bentuk semula. Setelah 7 hari, mereka akan membiarkan lahan tersebut ditumbuhi tanaman.",
         kebenaran:"fakta",
         sumber:"https://travelingyuk.com/fakta-unik-suku-baduy/276470/"
@@ -340,6 +340,12 @@ if (localStorage.userPoint) {
     localStorage.setItem("userPoint", Number(0));
 }
 
+function givePoint(amount) {
+    points = Number(points) + Number(amount)
+    document.querySelector(".points").innerHTML = "POIN : " + points.toString();
+    localStorage.setItem("userPoint", Number(points));
+}
+
 function rand(max) {
     return Math.floor(Math.random() * max);
 }
@@ -361,12 +367,6 @@ function changeQuestion() {
 function loadQuestion() {
     const questionText = document.querySelector("#questiontext");
     questionText.innerHTML = listpertanyaan[chosenQuestion].pertanyaan;
-}
-
-function givePoint(amount) {
-    points = Number(points) + Number(amount)
-    document.querySelector(".points").innerHTML = "POIN : " + points.toString();
-    localStorage.setItem("userPoint", Number(points));
 }
 
 function loadExplanation(correct) {
@@ -476,8 +476,13 @@ document.querySelector("#mainmenubutton").addEventListener("click", function() {
 });
 
 document.querySelector("#profilebutton").addEventListener("click", function() {
-    
+    changeScene(profile);
 });
+
 document.querySelector("#profilebutton2").addEventListener("click", function() {
-    
+    changeScene(profile);
+});
+
+document.querySelector("#resumebutton2").addEventListener("click", function() {
+    changeScene(mainmenu);
 });
